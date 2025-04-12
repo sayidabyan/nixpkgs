@@ -209,7 +209,7 @@ let
           name = launcherName;
           exec = "${launcherName} --name ${wmClass} %U";
           inherit icon;
-          desktopName = wrapper.applicationName;
+          desktopName = applicationName;
           startupNotify = true;
           startupWMClass = wmClass;
           terminal = false;
