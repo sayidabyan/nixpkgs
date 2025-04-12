@@ -113,8 +113,8 @@ let
     src = fetchFromGitHub {
       owner = "zen-browser";
       repo = "surfer";
-      rev = "ecd6b650f0234402976dde7e775d42aec6568406";
-      hash = "sha256-e83YPteNgMNfTzAjmu3YLudSGaBbmvOyS6WglP6j21k=";
+      rev = "0baaee2314b049d87ad5a64519d61ff80399e117";
+      hash = "sha256-W0aQpk5y2vPd00PemqgqH0nFPQOepWIdbCXfOifJDNI=";
     };
 
     patches = [
@@ -159,19 +159,19 @@ let
   firefox-l10n = fetchFromGitHub {
     owner = "mozilla-l10n";
     repo = "firefox-l10n";
-    rev = "9d639cd79d6b73081fadb3474dd7d73b89732e7b";
-    hash = "sha256-+2JCaPp+c2BRM60xFCeY0pixIyo2a3rpTPaSt1kTfDw=";
+    rev = "6a205705c4afab7fa81ba413f6695c4fe12ab2ec";
+    hash = "sha256-tVnvC8Je9o8Q42yqOqfVPbG+rw1tinOgPrdkpUyrTkI=";
   };
 in
 buildStdenv.mkDerivation (finalAttrs: {
   pname = "zen-browser-unwrapped";
-  version = "1.0.2-b.4";
+  version = "1.11.2b";
 
   src = fetchFromGitHub {
     owner = "zen-browser";
     repo = "desktop";
     rev = finalAttrs.version;
-    hash = "sha256-bV1dIOIKHS2iM9hJaKCJumTdzVHORl+PhXSdHdmCIQc=";
+    hash = "sha256-K+C4Z1I7uX/wNuqp6A+GC2v7T7KSiP2ENUcXumgbIJc=";
     fetchSubmodules = true;
   };
 
@@ -181,10 +181,10 @@ buildStdenv.mkDerivation (finalAttrs: {
   # The Firefox version is specified by `zen-browser` in the `surfer.json` file.
   #
   # We need to manually set the version here to avoid IFD.
-  firefoxVersion = "133.0.3";
+  firefoxVersion = "137.0.1";
   firefoxSrc = fetchurl {
     url = "mirror://mozilla/firefox/releases/${finalAttrs.firefoxVersion}/source/firefox-${finalAttrs.firefoxVersion}.source.tar.xz";
-    hash = "sha256-8TSlQgIAuwOrRg+dKGdQfA7bIiznP69AZM2+oCoKyhs=";
+    hash = "sha256-CB2oYC4ZyXsd5MiaJN2t6dFNOKMerHXc24VPDN0uC+Q=";
   };
 
   SURFER_COMPAT = generic;
