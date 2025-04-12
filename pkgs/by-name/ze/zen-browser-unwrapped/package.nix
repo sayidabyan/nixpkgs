@@ -171,7 +171,7 @@ buildStdenv.mkDerivation (finalAttrs: {
     owner = "zen-browser";
     repo = "desktop";
     rev = finalAttrs.version;
-    hash = "sha256-K+C4Z1I7uX/wNuqp6A+GC2v7T7KSiP2ENUcXumgbIJc=";
+    hash = "sha256-HrxPq5GUIjb6j1PzMZ2G6A6n34J7QuzGSqZoB3EYmdQ=";
     fetchSubmodules = true;
   };
 
