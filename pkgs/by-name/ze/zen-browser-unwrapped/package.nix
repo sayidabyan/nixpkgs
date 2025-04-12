@@ -123,7 +123,7 @@ let
       ./surfer-changeset.patch
     ];
 
-    npmDepsHash = "sha256-p0RVqn0Yfe0jxBcBa/hYj5g9XSVMFhnnZT+au+bMs18=";
+    npmDepsHash = "sha256-mDHlLZpsFrSaV4tYlvPzZdcJtFxPsrEnesX/5nxnrtY=";
     makeCacheWritable = true;
 
     SHARP_IGNORE_GLOBAL_LIBVIPS = false;
