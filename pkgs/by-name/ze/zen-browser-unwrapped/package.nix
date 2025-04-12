@@ -108,7 +108,7 @@
 let
   surfer = buildNpmPackage {
     pname = "surfer";
-    version = "1.6.4";
+    version = "1.11.4";
 
     src = fetchFromGitHub {
       owner = "zen-browser";
